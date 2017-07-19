@@ -14,9 +14,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 " This is an EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 
-" Supertab is a Vim plugin which allows you to use <Tab> for all your insert completion needs
-Plug 'ervandew/supertab'
-
 " Incsearch.vim incrementally highlights ALL pattern matches unlike default 'incsearch'
 Plug 'haya14busa/incsearch.vim'
 
