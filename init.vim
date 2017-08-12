@@ -47,6 +47,9 @@ Plug 'scrooloose/syntastic'
 " UltiSnips is the ultimate solution for snippets in Vim
 Plug 'SirVer/ultisnips'
 
+" A Vim bundle with snippets for JavaScript developers
+Plug 'ssergiuss/ultisnips-javascript'
+
 " A Vim bundle with snippets for PHP developers
 Plug 'ssergiuss/ultisnips-php'
 
