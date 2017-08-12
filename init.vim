@@ -193,6 +193,13 @@ vnoremap // y/<C-R>"<CR>
 " Keep only the active tab and split
 noremap <C-w>O :tabo \| on<CR>
 
+" Open new tab page
+noremap tn :tabnew<CR>
+" Close all tab pages except the current one
+noremap to :tabonly<CR>
+" Close the current tab page
+noremap tc :tabclose<CR>
+
 "
 " END Key Bindings
 "
