@@ -143,6 +143,10 @@ let &colorcolumn='81,121,122'
 " Remove trailing spaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Maintain undo history between sessions
+set undofile
+set undodir=~/.nvim/undo
+
 "
 " END Global Configuration
 "
