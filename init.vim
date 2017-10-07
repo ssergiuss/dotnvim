@@ -20,6 +20,9 @@ Plug 'haya14busa/incsearch.vim'
 " This repository contains snippets files for various programming languages
 Plug 'honza/vim-snippets'
 
+" Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
 " A simple, easy-to-use Vim alignment plugin
 Plug 'junegunn/vim-easy-align'
 
@@ -31,9 +34,6 @@ Plug 'myusuf3/numbers.vim'
 
 " JavaScript bundle for Vim, this bundle provides syntax highlighting and improved indentation
 Plug 'pangloss/vim-javascript'
-
-" This plug-in provides automatic closing of quotes, parenthesis, brackets, etc
-Plug 'Raimondi/delimitMate'
 
 " The NERD tree allows you to explore your filesystem and to open files and directories
 Plug 'scrooloose/nerdtree'
