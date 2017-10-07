@@ -29,6 +29,9 @@ Plug 'junegunn/vim-easy-align'
 " Run your favorite search tool from Vim, with an enhanced results list
 Plug 'mileszs/ack.vim'
 
+" Configure tab labels within Terminal Vim with a very succinct output
+Plug 'mkitt/tabline.vim'
+
 " Numbers.vim is a plugin for intelligently toggling line numbers
 Plug 'myusuf3/numbers.vim'
 
