@@ -308,6 +308,7 @@ let g:UltiSnipsJumpBackwardTrigger='<C-h>'
 
 " scrooloose/nerdtree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden = 1
 
 " scrooloose/syntastic
 let g:syntastic_check_on_open = 1
