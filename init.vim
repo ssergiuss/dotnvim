@@ -14,14 +14,25 @@ Plug 'ctrlpvim/ctrlp.vim'
 " This is an EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 
+" A true color Vim colorscheme based on sdras/night-owl-vscode-theme
+Plug 'haishanh/night-owl.vim'
+
 " Incsearch.vim incrementally highlights ALL pattern matches unlike default 'incsearch'
 Plug 'haya14busa/incsearch.vim'
 
 " This repository contains snippets files for various programming languages
 Plug 'honza/vim-snippets'
 
+" A 24bit colorscheme for Vim, Airline and Lightline
+Plug 'jacoborus/tender.vim'
+
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
+
+" A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals,
+" based on FlatColor, with colors inspired by the excellent One Dark syntax
+" theme for the Atom text editor
+Plug 'joshdick/onedark.vim'
 
 " A simple, easy-to-use Vim alignment plugin
 Plug 'junegunn/vim-easy-align'
@@ -35,8 +46,17 @@ Plug 'mkitt/tabline.vim'
 " Numbers.vim is a plugin for intelligently toggling line numbers
 Plug 'myusuf3/numbers.vim'
 
+" PaperColor Theme
+Plug 'NLKNguyen/papercolor-theme'
+
 " JavaScript bundle for Vim, this bundle provides syntax highlighting and improved indentation
 Plug 'pangloss/vim-javascript'
+
+" One of the best Atom Colorscheme now for Vim and NeoVim
+Plug 'rakr/vim-one'
+
+" Gruvbox Material is a modified version of Gruvbox, the contrast is adjusted to be softer in order to protect developers' eyes
+Plug 'sainnhe/gruvbox-material'
 
 " The NERD tree allows you to explore your filesystem and to open files and directories
 Plug 'scrooloose/nerdtree'
@@ -95,8 +115,41 @@ call plug#end()
 syntax enable
 
 " Set theme and airline theme
-colorscheme molokai
-let g:airline_theme='molokai'
+"
+" One
+"colorscheme one
+"set background=dark
+"let g:airline_theme='one'
+"
+" PaperColor
+"colorscheme PaperColor
+"set background=dark
+"let g:airline_theme='papercolor'
+"
+" Molokai
+"colorscheme molokai
+"let g:airline_theme='molokai'
+"
+" Tender
+"colorscheme tender
+"let g:airline_theme='tender'
+"let g:lightline={'colorscheme':'tender'}
+"
+" NightOwl
+"colorscheme night-owl
+"let g:lightline={'colorscheme':'nightowl'}
+"
+" Gruvbox Material
+"colorscheme gruvbox-material
+"let g:airline_theme='gruvbox_material'
+"let g:lightline={'colorscheme':'gruvbox_material'}
+"set background=dark
+"let g:gruvbox_material_background='medium'
+"
+" OneDark
+colorscheme onedark
+let g:airline_theme='onedark'
+let g:lightline={'colorscheme':'onedark'}
 
 " Set auto-indent options
 set autoindent
