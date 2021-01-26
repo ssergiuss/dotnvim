@@ -260,6 +260,11 @@ noremap to :tabonly<CR>
 " Close the current tab page
 noremap tc :tabclose<CR>
 
+" Save session
+noremap <C-s>s :mksession! session.nvim<CR>
+" Restore session
+noremap <C-s>r :source session.nvim<CR>
+
 "
 " END Key Bindings
 "
