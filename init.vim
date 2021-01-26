@@ -289,6 +289,8 @@ let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " Search for files by the word under the cursor
 map <C-p><C-w> <C-p><C-\>w
+" Set max results to 50
+let g:ctrlp_match_window = 'results:50'
 
 " haya14busa/incsearch.vim
 map /  <Plug>(incsearch-forward)
