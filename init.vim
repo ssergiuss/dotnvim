@@ -5,6 +5,9 @@
 " Set plugin directory
 call plug#begin('~/.nvim/plugged')
 
+" An arctic, north-bluish clean and elegant Vim color theme
+Plug 'arcticicestudio/nord-vim'
+
 " Lean & mean status/tabline for Vim that's light as air
 Plug 'bling/vim-airline'
 
@@ -20,6 +23,12 @@ Plug 'haishanh/night-owl.vim'
 " Incsearch.vim incrementally highlights ALL pattern matches unlike default 'incsearch'
 Plug 'haya14busa/incsearch.vim'
 
+" jsdoc.vim generates JSDoc block comments based on a function signature
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
+
 " This repository contains snippets files for various programming languages
 Plug 'honza/vim-snippets'
 
@@ -32,7 +41,8 @@ Plug 'jiangmiao/auto-pairs'
 " A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals,
 " based on FlatColor, with colors inspired by the excellent One Dark syntax
 " theme for the Atom text editor
-Plug 'joshdick/onedark.vim'
+" TODO remove?
+"Plug 'joshdick/onedark.vim'
 
 " A simple, easy-to-use Vim alignment plugin
 Plug 'junegunn/vim-easy-align'
@@ -46,11 +56,18 @@ Plug 'mkitt/tabline.vim'
 " Numbers.vim is a plugin for intelligently toggling line numbers
 Plug 'myusuf3/numbers.vim'
 
+" Dark and Light Themes for neovim >= 0.5 based on Atom One Dark & Atom One
+" Light theme written in lua with TreeSitter syntax highlight
+Plug 'navarasu/onedark.nvim'
+
 " PaperColor Theme
 Plug 'NLKNguyen/papercolor-theme'
 
 " JavaScript bundle for Vim, this bundle provides syntax highlighting and improved indentation
-Plug 'pangloss/vim-javascript'
+" TODO keep???
+"Plug 'pangloss/vim-javascript'
+
+Plug 'projekt0n/github-nvim-theme'
 
 " One of the best Atom Colorscheme now for Vim and NeoVim
 Plug 'rakr/vim-one'
@@ -66,6 +83,9 @@ Plug 'scrooloose/nerdcommenter'
 
 " Syntastic is a syntax checking plugin for Vim created by Martin Grenfell
 Plug 'scrooloose/syntastic'
+
+" A collection of language packs for Vim
+Plug 'sheerun/vim-polyglot'
 
 " UltiSnips is the ultimate solution for snippets in Vim
 Plug 'SirVer/ultisnips'
@@ -108,6 +128,17 @@ call plug#end()
 "
 
 "
+" Env Configuration
+"
+
+let g:python_host_prog='/Users/sergiu/.pyenv/versions/py2nvim/bin/python'
+let g:python3_host_prog='/Users/sergiu/.pyenv/versions/py3nvim/bin/python'
+
+"
+" END Env Configuration
+"
+
+"
 " Global Configuration
 "
 
@@ -144,12 +175,31 @@ syntax enable
 "let g:airline_theme='gruvbox_material'
 "let g:lightline={'colorscheme':'gruvbox_material'}
 "set background=dark
-"let g:gruvbox_material_background='medium'
+"let g:gruvbox_material_background='hard'
 "
 " OneDark
+"let g:onedark_config = {
+    "\ 'style': 'darker',
+"\}
 colorscheme onedark
-let g:airline_theme='onedark'
-let g:lightline={'colorscheme':'onedark'}
+"let g:airline_theme='onedark'
+"let g:lightline={'colorscheme':'onedark'}
+"
+" Nord
+"colorscheme nord
+"let g:airline_theme='nord'
+"let g:lightline={'colorscheme':'nord'}
+"let g:nord_cursor_line_number_background = 1
+"let g:nord_uniform_status_lines = 1
+"let g:nord_bold_vertical_split_line = 1
+"let g:nord_uniform_diff_background = 1
+"let g:nord_italic = 1
+"let g:nord_underline = 1
+"
+" GitHub
+"colorscheme github_dark
+"colorscheme github_dimmed
+"colorscheme github_dark_default
 
 " Set auto-indent options
 set autoindent
@@ -265,6 +315,9 @@ noremap <C-s>s :mksession! session.nvim<CR>
 " Restore session
 noremap <C-s>r :source session.nvim<CR>
 
+" Push changes
+noremap <C-b>p :! ./push<CR>
+
 "
 " END Key Bindings
 "
@@ -296,6 +349,10 @@ let g:ctrlp_match_window = 'results:50'
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+" heavenshell/vim-jsdoc
+"nmap <silent> <C-l> <Plug>(jsdoc)
+"nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 
 " junegunn/vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
