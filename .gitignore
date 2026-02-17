@@ -1,0 +1,19 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+
+# macOS
+.DS_Store
+
+# Neovim generated
+plugin/
+.luarc.json
+.neoconf.json
+
+# Spell files (binary, auto-downloaded)
+spell/
