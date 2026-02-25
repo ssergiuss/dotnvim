@@ -8,5 +8,4 @@ vim.g.python3_host_prog = os.getenv("HOME") .. "/.venvs/nvim/bin/python"
 -- Configure LazyVim to use Intelephense for PHP
 vim.g.lazyvim_php_lsp = "intelephense"
 
--- TODO: keep?
 vim.opt.winbar = "%=%m %f"
