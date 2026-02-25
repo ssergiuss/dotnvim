@@ -29,13 +29,17 @@ This configuration uses Lazy.nvim as the plugin manager with LazyVim as the base
 - Host programs configured: Perl (`/opt/homebrew/bin/perl`) and Python (`~/.venvs/nvim/bin/python`)
 - StyLua formatting configured with 2-space indentation and 120 column width
 - Claude Code plugin integrated with comprehensive keybindings under `<leader>a`
+- PHP: Intelephense LSP with php-cs-fixer for formatting (auto-discovers project config)
+- Testing: vim-test with vimux strategy under `<leader>t`
+- Navigation: vim-tmux-navigator for seamless tmux/vim pane switching
+- Winbar enabled showing modified flag and file path per window
 
 ## Enabled LazyVim Extras
 
 The configuration includes these LazyVim extras (defined in `lazyvim.json`):
 - AI: copilot
-- Coding: yanky
-- Editor: dial, inc-rename  
+- Coding: mini-surround, yanky
+- Editor: dial, inc-rename
 - Languages: ansible, docker, git, json, markdown, php, toml, typescript, yaml
 - Utilities: dot, mini-hipatterns
 
@@ -64,3 +68,10 @@ The configuration includes comprehensive Claude Code keybindings under `<leader>
 - `<leader>as` - Send selection to Claude Code (visual mode) or add file from tree
 - `<leader>aa` - Accept Claude Code diff
 - `<leader>ad` - Deny Claude Code diff
+
+### Testing (vim-test)
+- `<leader>tn` - Test nearest
+- `<leader>tf` - Test file
+- `<leader>ts` - Test suite
+- `<leader>tl` - Test last
+- `<leader>tv` - Test visit
