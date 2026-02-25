@@ -1,6 +1,7 @@
 return {
   {
     "vim-test/vim-test",
+    dependencies = { "preservim/vimux" },
     init = function()
       vim.g["test#strategy"] = "vimux"
     end,
