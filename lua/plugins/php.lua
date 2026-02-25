@@ -27,7 +27,6 @@ return {
           command = "php-cs-fixer",
           args = {
             "fix",
-            "--config=" .. vim.fn.expand("~/Projects/partfiniti/web/.php-cs-fixer.dist.php"),
             "$FILENAME",
           },
           stdin = false,
